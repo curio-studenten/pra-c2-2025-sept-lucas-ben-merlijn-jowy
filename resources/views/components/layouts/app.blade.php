@@ -33,12 +33,12 @@
             </ul>
 
         </div>
+    </div>
 
-        <div class="row">
+        <div class="footer">
             <x-footer/>
         </div>
 
-    </div>
 
 
 </div>
