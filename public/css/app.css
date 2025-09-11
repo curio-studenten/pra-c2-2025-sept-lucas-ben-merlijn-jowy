@@ -4417,7 +4417,13 @@ input[type=button].btn-block {
 .card-footer:last-child {
     border-radius: 0 0 calc(0.25rem - 1px) calc(0.25rem - 1px);
 }
-
+footer{
+    margin-top: 20px;
+    padding: 10px 0;
+    background-color: var(--gray-dark);
+    text-align: center;
+    color: white;
+}
 .card-header-tabs {
     margin-right: -0.625rem;
     margin-bottom: -0.75rem;

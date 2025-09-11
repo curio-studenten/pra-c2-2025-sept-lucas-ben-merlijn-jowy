@@ -36,14 +36,15 @@
 
             </div>
         </div>
-
-        <div class="footer">
-            <x-footer />
-        </div>
-
-
-
     </div>
+
+    <div class="footer">
+        <x-footer />
+    </div>
+
+
+
+    
 
     <!-- Bootstrap core JavaScript
 ================================================== -->
