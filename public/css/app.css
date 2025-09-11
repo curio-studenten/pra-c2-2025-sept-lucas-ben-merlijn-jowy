@@ -3982,6 +3982,15 @@ input[type=button].btn-block {
     font-size: 1.125rem;
     line-height: inherit;
     white-space: nowrap;
+    padding: 0.6rem 1.2rem;
+    background: gray; /* purple → blue */
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: all 0.2s ease-in-out;
 }
 .navbar-brand:hover, .navbar-brand:focus {
     text-decoration: none;
@@ -10042,10 +10051,11 @@ a.text-dark:hover, a.text-dark:focus {
     text-decoration: none;
 }
 
+/*    ----------ALLE HANDLEIDINGEN CSS
 .button-href a {
   display: inline-block;
   padding: 0.6rem 1.2rem;
-  background: gray; /* purple → blue */
+  background: gray;
   color: #fff;
   text-decoration: none;
   font-weight: 600;
@@ -10069,3 +10079,5 @@ a.text-dark:hover, a.text-dark:focus {
     width: 260px;
     font-size: 20px;
 }
+
+*/  
