@@ -10031,3 +10031,35 @@ a.text-dark:hover, a.text-dark:focus {
     color: #ccc;
     content: "/ ";
 }
+
+.button-href button a{
+    text-decoration: none;
+}
+
+.button-href a {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  background: gray; /* purple → blue */
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: all 0.2s ease-in-out;
+}
+
+.button-href a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.button-href a:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.col-md-4 ul {
+    width: 260px;
+    font-size: 20px;
+}
