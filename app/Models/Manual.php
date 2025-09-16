@@ -9,6 +9,8 @@ class Manual extends Model
 {
     use HasFactory;
 
+    protected $fillable = ['views'];
+
     // Returns the filesize in a human readable format
     public function getFilesizeHumanReadableAttribute(){
 
@@ -51,6 +53,8 @@ class Manual extends Model
         else	// If it's not download, link to the origin
             $url = $originUrl;
 
-        return $url; */
+        return
+            $url; */
     }
 }
+  
