@@ -1,13 +1,13 @@
-<footer class="site-footer" style="background:#f8f8f8; padding: 30px 20px; border-top:1px solid #ddd;">
+<footer class="site-footer" style="padding: 30px 20px; border-top:1px solid #ddd;">
 
     <div class="footer-grid" style="display:flex; flex-wrap:wrap; gap:20px; justify-content:space-between;">
 
-        <div class="footer-block" style="flex:1; min-width:200px; color:#000;">
+        <div class="footer-block" style="flex:1; min-width:200px;">
             <h4>Over ons</h4>
             <p>Wij zijn een toonaangevende handleidingen-website, gespecialiseerd in het verzamelen en aanbieden van handleidingen voor elektronische apparaten, huishoudelijke apparatuur en auto-accessoires. Ons doel is om gebruikers eenvoudig toegang te geven tot duidelijke en actuele handleidingen.</p>
         </div>
 
-        <div class="footer-block" style="flex:1; min-width:200px; color:#000;">
+        <div class="footer-block" style="flex:1; min-width:200px;">
             <h4>Contact</h4>
             <p>Adres: Innovatiepark 45, 1000 AB Techstad</p>
             <p>Telefoon: 012-3456789</p>
@@ -24,7 +24,7 @@
         </div>
     </div>
 
-    <div style="margin-top:20px; text-align:center; color:#666;">
+    <div style="margin-top:20px; text-align:center;">
         © {{ __('misc.copyright') }}
     </div>
           
