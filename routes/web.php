@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ContactController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -34,10 +35,11 @@ use App\Http\Controllers\ProductCategoryController;
 use App\Http\Controllers\SitemapController;
 use App\Http\Controllers\LocaleController;
 
+Route::get('/manual/redirect/{manual}', [ManualController::class, 'redirectToManual'])->name('manual.redirect');
 // Homepage
 Route::get('/', function () {
-    $brands = Brand::all()->sortBy('name');
     $ticket4 = 'alle handleidingen:';
+    $brands = Brand::all()->sortBy('name');
     return view('pages.homepage', compact('brands', 'ticket4'));
 })->name('home');
 
@@ -57,3 +59,10 @@ Route::get('/{brand_id}/{brand_slug}/{manual_id}/', [ManualController::class, 's
 
 // Generate sitemaps
 Route::get('/generateSitemap/', [SitemapController::class, 'generate']);
+
+//contact
+Route::get('/contact', function () {
+    return view('pages.contact');
+});
+
+Route::post('/contact', [ContactController::class, 'store']);
