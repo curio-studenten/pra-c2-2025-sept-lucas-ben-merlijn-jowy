@@ -38,8 +38,9 @@
                 <label for="message">Bericht:</label>
                 <textarea name="message" id="message" rows="4" required></textarea>
             </div>
-
-            <button type="submit">Versturen</button>
+            <div class="contactButton">
+                <button type="submit">Versturen</button>
+            </div>
         </form>
 
     </div>
