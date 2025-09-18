@@ -16,7 +16,7 @@ class ContactController extends Controller
             'Datum' => now()->toDateTimeString(),
         ];
 
-        $txt = "e";
+        $txt = "";
         foreach ($data as $key => $value) {
             $txt .= "$key: $value\n";
         }
