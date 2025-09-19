@@ -15,6 +15,18 @@
             <div class="col-md-8">
                 <x-header />
 
+                <div class="langselect">
+                    <form method="post" action="{{ route('set-locale') }}">
+                        @csrf
+                        <label for="language"></label>
+                        <select name="language" id="language">
+                            <option value="en" {{ app()->getLocale() == 'en' ? 'selected' : '' }}>en</option>
+                            <option value="nl" {{ app()->getLocale() == 'nl' ? 'selected' : '' }}>nl</option>
+                        </select>
+                        <button type="submit">Opslaan</button>
+                    </form>
+                </div>
+
                 <ul class="breadcrumb">
                     <li><a href="/" title="{{ __('misc.home_alt') }}"
                             alt="{{ __('misc.home_alt') }}">{{ __('misc.home') }}</a></li>
@@ -22,12 +34,12 @@
                 </ul>
 
                 @if ( isset($_GET['q']) )
-                    <x-search_results />
+                <x-search_results />
                 @else
-                    {{ $slot }}
+                {{ $slot }}
                 @endif
 
-                <ul class="breadcrumb"> 
+                <ul class="breadcrumb">
                     <li>
                         <a href="/" title="{{ __('misc.home_alt') }}" alt="{{ __('misc.home_alt') }}">{{ __('misc.home') }}</a>
                     </li>
@@ -44,7 +56,7 @@
 
 
 
-    
+
 
     <!-- Bootstrap core JavaScript
 ================================================== -->

@@ -19,27 +19,27 @@
     ?>
 
     <div class="container">
-        <h1>Contact Pagina</h1>
-        <p>Als u vragen hebt over de handleiding, neem dan met ons contact op.</p>
+        <h1>{{ __('contact.contact_title') }}</h1>
+        <p>{{ __('contact.contact_info') }}</p>
 
         <form action="/contact" method="POST">
             @csrf
             <div>
-                <label for="name">Naam:</label>
+                <label for="name">{{ __('contact.your_name') }}</label>
                 <input type="text" name="name" id="name" required>
             </div>
 
             <div>
-                <label for="email">E-mailadres:</label>
+                <label for="email">{{ __('contact.your_email') }}</label>
                 <input type="email" name="email" id="email" required>
             </div>
 
             <div>
-                <label for="message">Bericht:</label>
+                <label for="message">{{ __('contact.message') }}</label>
                 <textarea name="message" id="message" rows="4" required></textarea>
             </div>
             <div class="contactButton">
-                <button type="submit">Versturen</button>
+                <button type="submit">{{ __('contact.send_message') }}</button>
             </div>
         </form>
 

@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ContactController;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Http\Request;
 
 /*
 |--------------------------------------------------------------------------
@@ -38,9 +39,8 @@ use App\Http\Controllers\LocaleController;
 Route::get('/manual/redirect/{manual}', [ManualController::class, 'redirectToManual'])->name('manual.redirect');
 // Homepage
 Route::get('/', function () {
-    $ticket4 = 'alle handleidingen:';
     $brands = Brand::all()->sortBy('name');
-    return view('pages.homepage', compact('brands', 'ticket4'));
+    return view('pages.homepage', compact('brands'));
 })->name('home');
 
 Route::get('/manual/{language}/{brand_slug}/', [RedirectController::class, 'brand']);
@@ -66,3 +66,13 @@ Route::get('/contact', function () {
 });
 
 Route::post('/contact', [ContactController::class, 'store']);
+
+Route::post('/set-locale', function (Request $request) {
+    $request->validate([
+        'language' => 'required|in:en,nl',
+    ]);
+
+    $request->session()->put('locale', $request->language);
+
+    return back();
+})->name('set-locale');

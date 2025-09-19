@@ -1,6 +1,6 @@
 <x-layouts.app>
 
-    <h1>{{ $ticket4 }}</h1>
+    <h1>{{ __('misc.subtitle') }}</h1>
 
     <x-slot:introduction_text>
         <p><img src="img/afbl_logo.png" align="right" width="100" height="100">{{ __('introduction_texts.homepage_line_1') }}</p>

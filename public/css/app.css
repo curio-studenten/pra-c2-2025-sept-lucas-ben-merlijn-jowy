@@ -576,6 +576,11 @@ pre code {
     background-color: rgb(220, 218, 218);
 }
 
+.langselect{
+    text-align: right;
+    margin-bottom: 10px;
+}
+
 .no-gutters {
     margin-right: 0;
     margin-left: 0;
