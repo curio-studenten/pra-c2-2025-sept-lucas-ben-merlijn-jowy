@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'home' => "Hoofdpagina",
+'home' => "Hoofdpagina",
 'home_alt' => "Download je handleiding: Gratis gebruikersgidsen!",
 'homepage_title' => "Download je handleiding",
 'copyright' => "Copyright 2025 Avarix",
@@ -23,5 +23,6 @@ return [
 'view_manual_alt' => "Bekijk direct je handleiding",
 'all_brands' => "Alle merken",
 'subtitle' => "Alle handleidingen:",
+'letters' => "Ga naar letter:"
 
 ];
