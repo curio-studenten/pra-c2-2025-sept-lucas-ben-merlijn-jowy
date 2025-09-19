@@ -11,6 +11,7 @@ return new class extends Migration
         Schema::create('manuals', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('brand_id');
+            $table->integer('views');
             $table->string('name');
             $table->bigInteger('filesize');
             $table->text('originUrl');
