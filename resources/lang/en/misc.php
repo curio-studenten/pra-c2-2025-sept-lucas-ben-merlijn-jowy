@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'home' => "Home",
+'home' => "Home",
 'home_alt' => "Download your manual homepage: Free user guides!",
 'homepage_title' => "Download your manual",
 'copyright' => "Copyright 2025 Avarix",
@@ -23,5 +23,6 @@ return [
 'view_manual_alt' => "Directly view your manual",
 'all_brands' => "All brands",
 'subtitle' => "All manuals:",
+'letters' => "Go to letter:"
 
 ];

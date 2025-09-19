@@ -15,7 +15,7 @@
     </h1>
 
     <div class="Ga-naar-letter">
-        <h3>Ga naar letter:</h3>
+        <h3>{{ __('misc.letters') }}</h3>
     </div>
     <div class="alphabet">
         <a href="#A">A</a>
