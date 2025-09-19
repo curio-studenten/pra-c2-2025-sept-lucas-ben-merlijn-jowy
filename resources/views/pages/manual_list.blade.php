@@ -18,12 +18,6 @@
                             {{ $manual->name }}
                         </a>
                         <div class="manual-container">
-        @foreach ($manuals as $manual)
-            <div class="manual-item">
-                  <a href="{{ route('manual.redirect', ['manual' => $manual->id]) }}" target="_blank" title="{{ $manual->name }}">
-                    {{ $manual->name }}
-                </a>
-            </div>
                         <div style="font-size: 0.85em; color: #666;">
                             ({{ $manual->filesize_human_readable }})
                         </div>
