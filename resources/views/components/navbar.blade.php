@@ -19,6 +19,11 @@
             </script>
             <gcse:searchbox-only></gcse:searchbox-only>
 
+            <div class="ml-3">
+                <a href="{{ route('language.change', 'nl') }}" class="btn btn-sm btn-outline-light">NL</a>
+                <a href="{{ route('language.change', 'en') }}" class="btn btn-sm btn-outline-light">EN</a>
+            </div>
+
 
         </div><!--/.navbar-collapse -->
     </div>

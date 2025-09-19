@@ -15,18 +15,6 @@
             <div class="col-md-8">
                 <x-header />
 
-                <div class="langselect">
-                    <form method="post" action="{{ route('set-locale') }}">
-                        @csrf
-                        <label for="language"></label>
-                        <select name="language" id="language">
-                            <option value="en" {{ app()->getLocale() == 'en' ? 'selected' : '' }}>en</option>
-                            <option value="nl" {{ app()->getLocale() == 'nl' ? 'selected' : '' }}>nl</option>
-                        </select>
-                        <button type="submit">Opslaan</button>
-                    </form>
-                </div>
-
                 <ul class="breadcrumb">
                     <li><a href="/" title="{{ __('misc.home_alt') }}"
                             alt="{{ __('misc.home_alt') }}">{{ __('misc.home') }}</a></li>

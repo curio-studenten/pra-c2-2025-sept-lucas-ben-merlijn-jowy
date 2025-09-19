@@ -68,12 +68,4 @@ Route::get('/contact', function () {
 
 Route::post('/contact', [ContactController::class, 'store']);
 
-Route::post('/set-locale', function (Request $request) {
-    $request->validate([
-        'language' => 'required|in:en,nl',
-    ]);
-
-    $request->session()->put('locale', $request->language);
-
-    return back();
-})->name('set-locale');
+Route::get('/language/{language_slug}/', [LocaleController::class, 'changeLocale'])->name('language.change');
