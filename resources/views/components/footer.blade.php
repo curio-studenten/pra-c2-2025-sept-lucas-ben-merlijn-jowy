@@ -3,19 +3,19 @@
     <div class="footer-grid" style="display:flex; flex-wrap:wrap; gap:20px; justify-content:space-between;">
 
         <div class="footer-block" style="flex:1; min-width:200px;">
-            <h4>Over ons</h4>
-            <p>Wij zijn een toonaangevende handleidingen-website, gespecialiseerd in het verzamelen en aanbieden van handleidingen voor elektronische apparaten, huishoudelijke apparatuur en auto-accessoires. Ons doel is om gebruikers eenvoudig toegang te geven tot duidelijke en actuele handleidingen.</p>
+            <h4>{{ __('footerMisc.about_us') }}</h4>
+            <p>{{ __('footerMisc.info') }}</p>
         </div>
 
         <div class="footer-block" style="flex:1; min-width:200px;">
             <h4>Contact</h4>
-            <p>Adres: Innovatiepark 45, 1000 AB Techstad</p>
-            <p>Telefoon: 012-3456789</p>
-            <p>Email: support@handleidingen-site.nl</p>
+            <p>{{ __('footerMisc.adress') }}</p>
+            <p>{{ __('footerMisc.phone') }}</p>
+            <p>{{ __('footerMisc.email') }}</p>
         </div>
 
         <div class="footer-block" style="flex:1; min-width:200px;">
-            <h4>Volg ons</h4>
+            <h4>{{ __('footerMisc.follow') }}</h4>
             <p>
                 <a href="">Facebook</a><br>
                 <a href="">Twitter</a><br>
