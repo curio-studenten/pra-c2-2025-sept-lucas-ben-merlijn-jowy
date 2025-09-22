@@ -73,5 +73,5 @@ Route::get('/language/{language_slug}/', [LocaleController::class, 'changeLocale
 Route::get('/{letter}', [BrandController::class, 'indexByLetter'])
     ->where('letter', '[A-Z]');
 
-Route::get('/brand/{brand_id}/{brand_slug}', [BrandController::class, 'show'])
+Route::get('/{brand_id}/{brand_slug}', [BrandController::class, 'show'])
     ->name('brands.show');
