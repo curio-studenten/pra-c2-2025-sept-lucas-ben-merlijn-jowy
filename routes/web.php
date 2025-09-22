@@ -69,3 +69,9 @@ Route::get('/contact', function () {
 Route::post('/contact', [ContactController::class, 'store']);
 
 Route::get('/language/{language_slug}/', [LocaleController::class, 'changeLocale'])->name('language.change');
+
+Route::get('/{letter}', [BrandController::class, 'indexByLetter'])
+    ->where('letter', '[A-Z]');
+
+Route::get('/brand/{brand_id}/{brand_slug}', [BrandController::class, 'show'])
+    ->name('brands.show');

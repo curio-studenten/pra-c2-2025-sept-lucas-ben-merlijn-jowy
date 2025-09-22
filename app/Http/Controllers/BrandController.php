@@ -33,4 +33,14 @@ public function index()
         
 
     }
+            public function indexByLetter($letter)
+        {
+            // Alle merken ophalen die beginnen met de opgegeven letter
+            $brands = Brand::where('name', 'LIKE', $letter . '%')
+                            ->orderBy('name')
+                            ->get();
+
+            // De view tonen met de merken
+            return view('pages.by_letter', compact('brands', 'letter'));
+        }
 }
