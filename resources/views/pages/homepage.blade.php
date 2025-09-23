@@ -14,6 +14,19 @@
         </x-slot:title>
     </h1>
 
+   
+    @foreach($topManuals as $manual)
+        <li>
+            ({{ $manual->brand->name }})
+            <a href="{{ route('manuals.redirect', ['manual' => $manual->id]) }}" target="_blank">
+                {{ $manual->name }}
+            </a>
+                
+         
+        </li>
+    @endforeach
+
+
     <div class="Ga-naar-letter">
         <h3>{{ __('misc.letters') }}</h3>
     </div>

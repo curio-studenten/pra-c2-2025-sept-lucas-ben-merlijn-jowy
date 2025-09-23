@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
+
 class Manual extends Model
 {
     use HasFactory;
@@ -55,6 +56,12 @@ class Manual extends Model
 
         return
             $url; */
-    }
+    
+        }
+
+        public function brand()
+        {
+            return $this->belongsTo(Brand::class);
+        }
 }
   

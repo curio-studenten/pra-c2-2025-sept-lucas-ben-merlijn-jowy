@@ -37,11 +37,13 @@ use App\Http\Controllers\SitemapController;
 use App\Http\Controllers\LocaleController;
 
 
-Route::get('/manual/redirect/{manualId}', [ManualController::class, 'redirectToManual'])->name('manual.redirect');
+Route::get('/manual/redirect/{manual}', [ManualController::class, 'redirectToManual'])->name('manuals.redirect');
 // Homepage
 Route::get('/', function () {
     $brands = Brand::all()->sortBy('name');
-    return view('pages.homepage', compact('brands'));
+    $topManuals = \App\Models\Manual::with('brand')->orderBy('view_count', 'desc')->take(10)->get();
+ 
+    return view('pages.homepage', compact('brands', 'topManuals'));
 })->name('home');
 
 Route::get('/manual/{language}/{brand_slug}/', [RedirectController::class, 'brand']);

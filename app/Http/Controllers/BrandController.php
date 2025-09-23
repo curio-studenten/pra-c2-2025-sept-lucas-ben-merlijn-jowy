@@ -10,15 +10,7 @@ use App\Models\Manual;
 class BrandController extends Controller
 {
 
-public function index()
-        {
-    // 10 meest bekeken manuals
-    $popularManuals = Manual::orderBy('views', 'desc')
-                            ->take(10)
-                            ->get();
 
-    return view('home', compact('popularManuals'));
-        }
 
     public function show($brand_id, $brand_slug)
     {
