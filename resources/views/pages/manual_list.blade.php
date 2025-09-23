@@ -6,6 +6,21 @@
 
     <h1>{{ $brand->name }}</h1>
 
+    @php
+
+                $topTypes = \App\Models\Manual::orderBy('views', 'desc')->take(5)->get();
+
+            @endphp
+            <b>Dit zijn de 5 populairste handleidingen</b>
+            </br>
+            <ul>
+                @foreach ($manuals as $manual)
+                    <li>{{ $manual->name }}</br></li>
+                @endforeach
+            </ul>
+        </div>
+
+
     <p>{{ __('introduction_texts.type_list', ['brand'=>$brand->name]) }}</p>
 
     <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1.5rem; margin-bottom: 2rem;">
