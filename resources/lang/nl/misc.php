@@ -25,5 +25,5 @@ return [
 'subtitle' => "Alle handleidingen:",
 'letters' => "Ga naar letter:",
 'top10' => "Top 10 merken:",
-
+'top5' => "Top 5 merken:",
 ];

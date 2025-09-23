@@ -25,5 +25,6 @@ return [
 'subtitle' => "All manuals:",
 'letters' => "Go to letter:",
 'top10' => "Top 10 brands:",
+'top5' => "Top 5 brands:",
 
 ];

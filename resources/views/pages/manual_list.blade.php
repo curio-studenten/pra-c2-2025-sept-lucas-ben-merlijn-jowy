@@ -11,7 +11,7 @@
                 $topTypes = \App\Models\Manual::orderBy('views', 'desc')->take(5)->get();
 
             @endphp
-            <b>Dit zijn de 5 populairste handleidingen</b>
+            <b>{{ __('misc.top5') }}</b>
             </br>
             <ul>
                 @foreach ($manuals as $manual)
