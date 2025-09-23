@@ -21,8 +21,9 @@ return [
 'download_manual_alt' => "Klik hier om je handleiding te downloaden",
 'view_manual' => "Bekijk direct je handleiding",
 'view_manual_alt' => "Bekijk direct je handleiding",
-'all_brands' => "Alle merken",
+'all_brands' => "Alle merken:",
 'subtitle' => "Alle handleidingen:",
-'letters' => "Ga naar letter:"
+'letters' => "Ga naar letter:",
+'top10' => "Top 10 merken:",
 
 ];

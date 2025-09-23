@@ -13,7 +13,7 @@
         </x-slot:title>
     </h1>
 
-   
+   <h1>{{ __('misc.top10') }}</h1>
     @foreach($topManuals as $manual)
         <li>
             ({{ $manual->brand->name }})
@@ -25,8 +25,7 @@
         </li>
     @endforeach
 
-    <h1>{{ __('misc.all_brands') }}</h1>
-
+    <br>
     <div class="Ga-naar-letter">
         <h3>{{ __('misc.letters') }}</h3>
     </div>
@@ -83,6 +82,9 @@
         <p>-</p>
         <a href="#Z">Z</a>
     </div>
+
+    <h1>{{ __('misc.all_brands') }}</h1>
+
     <?php
     $size = count($brands);
     $columns = 3;
