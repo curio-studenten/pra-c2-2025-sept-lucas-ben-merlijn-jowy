@@ -1,6 +1,5 @@
 <x-layouts.app>
 
-    <h1>{{ __('misc.subtitle') }}</h1>
 
     <x-slot:introduction_text>
         <p><img src="img/afbl_logo.png" align="right" width="100" height="100">{{ __('introduction_texts.homepage_line_1') }}</p>
@@ -26,6 +25,7 @@
         </li>
     @endforeach
 
+    <h1>{{ __('misc.all_brands') }}</h1>
 
     <div class="Ga-naar-letter">
         <h3>{{ __('misc.letters') }}</h3>
