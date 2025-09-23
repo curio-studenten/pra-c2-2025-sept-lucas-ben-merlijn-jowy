@@ -20,7 +20,7 @@
                         ({{ $manual->filesize_human_readable }})
                     </div>
                 @else
-                    <a href="{{ route('manual.redirect', ['manualId' => $manual->id]) }}" target="new" title="{{ $manual->name }}">
+                    <a href="{{ route('manual.redirect', ['manual' => $manual->id]) }}" target="new" title="{{ $manual->name }}">
                         {{ $manual->name }}
                     </a>
                 @endif

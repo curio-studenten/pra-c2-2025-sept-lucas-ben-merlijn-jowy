@@ -18,7 +18,7 @@
     @foreach($topManuals as $manual)
         <li>
             ({{ $manual->brand->name }})
-            <a href="{{ route('manuals.redirect', ['manual' => $manual->id]) }}" target="_blank">
+            <a href="{{ route('manual.redirect', ['manual' => $manual->id]) }}" target="_blank">
                 {{ $manual->name }}
             </a>
                 

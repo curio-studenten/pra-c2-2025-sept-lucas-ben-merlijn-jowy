@@ -37,7 +37,7 @@ use App\Http\Controllers\SitemapController;
 use App\Http\Controllers\LocaleController;
 
 
-Route::get('/manual/redirect/{manual}', [ManualController::class, 'redirectToManual'])->name('manuals.redirect');
+Route::get('/manual/redirect/{manual}', [ManualController::class, 'redirectToManual'])->name('manual.redirect');
 // Homepage
 Route::get('/', function () {
     $brands = Brand::all()->sortBy('name');
