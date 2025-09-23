@@ -41,7 +41,7 @@ Route::get('/manual/redirect/{manual}', [ManualController::class, 'redirectToMan
 // Homepage
 Route::get('/', function () {
     $brands = Brand::all()->sortBy('name');
-    $topManuals = \App\Models\Manual::with('brand')->orderBy('view_count', 'desc')->take(10)->get();
+    $topManuals = \App\Models\Manual::with('brand')->orderBy('views', 'desc')->take(10)->get();
  
     return view('pages.homepage', compact('brands', 'topManuals'));
 })->name('home');
