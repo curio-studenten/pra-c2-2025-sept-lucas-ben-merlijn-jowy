@@ -3,7 +3,9 @@
         <div class="navbar-header mr-auto">
             <a class="navbar-brand" href="/" title="{{ __('misc.home_alt') }}">{{ __('misc.homepage_title') }}</a>
             <a class="navbar-brand" href="/contact" title="{{ __('misc.contact_alt') }}">{{ __('contact.contact') }}</a>
+            <a class="navbar-brand" href="/beheerPagina" title="{{ __('misc.BeheerPagina_alt') }}">{{ __('beheer.beheernav') }}</a>
         </div>
+
         <div id="navbar" class="form-inline">
 
             <script>
@@ -24,15 +26,12 @@
                 <a href="{{ route('language.change', 'en') }}" class="btn btn-sm btn-outline-light">EN</a>
             </div>
 
-            <div class="checklogin">
-                @if (Auth::check())
-                    <a class="navbar-brand" href="{{ route('logout') }}">Uitloggen</a>
-                @else
-                    <a class="navbar-brand" href="{{ route('login') }}">Inloggen</a>
-                @endif
-            </div>
-
 
         </div><!--/.navbar-collapse -->
     </div>
+    @if (Auth::check())
+    <a class="navbar-brand" href="{{ route('logout') }}">Uitloggen</a>
+    @else
+    <a class="navbar-brand" href="{{ route('login') }}">Inloggen</a>
+    @endif
 </nav>
