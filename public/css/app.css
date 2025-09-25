@@ -159,6 +159,7 @@ a {
     color: #3490dc;
     text-decoration: none;
     background-color: transparent;
+    margin: 5px;
 }
 a:hover {
     color: #1d68a7;
@@ -610,6 +611,13 @@ pre code {
     max-width: 100%;
 }
 
+.checklogin {
+    text-align: right;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
 .row-cols-1 > * {
     flex: 0 0 100%;
     max-width: 100%;

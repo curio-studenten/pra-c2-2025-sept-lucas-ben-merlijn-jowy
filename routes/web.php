@@ -1,3 +1,4 @@
+
 <?php
 
 use App\Http\Controllers\ContactController;
@@ -35,14 +36,14 @@ use App\Http\Controllers\ManualController;
 use App\Http\Controllers\ProductCategoryController;
 use App\Http\Controllers\SitemapController;
 use App\Http\Controllers\LocaleController;
-
+use App\Http\Controllers\LoginController;
 
 Route::get('/manual/redirect/{manual}', [ManualController::class, 'redirectToManual'])->name('manual.redirect');
 // Homepage
 Route::get('/', function () {
     $brands = Brand::all()->sortBy('name');
     $topManuals = \App\Models\Manual::with('brand')->orderBy('views', 'desc')->take(10)->get();
- 
+
     return view('pages.homepage', compact('brands', 'topManuals'));
 })->name('home');
 
@@ -77,3 +78,21 @@ Route::get('/{letter}', [BrandController::class, 'indexByLetter'])
 
 Route::get('/{brand_id}/{brand_slug}', [BrandController::class, 'show'])
     ->name('brands.show');
+
+Route::get('/login', function (Request $request) {
+    return view('pages.login');
+})->name('login');
+
+
+use App\Http\Controllers\RegisterController;
+Route::get('/register', [RegisterController::class, 'create'])->name('register');
+Route::post('/register', [RegisterController::class, 'store']);
+
+Route::post('/login', [LoginController::class, 'store']);
+
+Route::get('/logout', function (Request $request) {
+    auth()->logout();
+    $request->session()->invalidate();
+    $request->session()->regenerateToken();
+    return redirect('/');
+})->name('logout');

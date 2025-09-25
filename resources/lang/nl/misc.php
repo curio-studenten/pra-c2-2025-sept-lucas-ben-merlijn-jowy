@@ -26,4 +26,5 @@ return [
 'letters' => "Ga naar letter:",
 'top10' => "Top 10 merken:",
 'top5' => "Top 5 merken:",
+'login_alt' => "Log in op je account",
 ];

@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Auth\Events\Login;
+
 return [
 
     /*
@@ -26,5 +28,6 @@ return [
 'letters' => "Go to letter:",
 'top10' => "Top 10 brands:",
 'top5' => "Top 5 brands:",
+'login_alt' => "Login to your account",
 
 ];
