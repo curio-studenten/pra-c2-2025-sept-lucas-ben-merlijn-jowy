@@ -14,6 +14,9 @@
     </h1>
 
 
+    @if(!isset(Auth::user()->id))
+        <script>window.location = "{{ route('login') }}";</script>
+    @endif
 
 
     <div class="container">
