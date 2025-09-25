@@ -96,3 +96,8 @@ Route::get('/logout', function (Request $request) {
     $request->session()->regenerateToken();
     return redirect('/');
 })->name('logout');
+
+//beheerpagina
+Route::get('/beheerPagina', function () {
+    return view('pages.beheerPagina');
+});
