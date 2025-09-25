@@ -14,9 +14,12 @@
     </h1>
 
 
-    <?php
-
-    ?>
+    @php
+        if (!session()->has('user_id')) {
+            header("Location: " . url(route('login')));
+            exit;
+        }
+    @endphp
 
     <div class="container">
         <h1>{{ __('contact.contact_title') }}</h1>
