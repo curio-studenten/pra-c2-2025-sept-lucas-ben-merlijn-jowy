@@ -14,7 +14,6 @@ return new class extends Migration
             $table->integer('views');
             $table->string('name');
             $table->bigInteger('filesize');
-              $table->integer('views');
             $table->text('originUrl');
             $table->string('filename')->nullable();
             $table->string('downloadedServer')->nullable();
