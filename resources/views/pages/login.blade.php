@@ -1,7 +1,7 @@
 <x-layouts.app>
 
     <div class="container">
-        <h1>Login</h1>
+        <h1>{{ __('login.login') }}</h1>
 
         <form action="/login" method="POST">
             @csrf
@@ -15,27 +15,27 @@
             </div>
             @endif
             <div class="form-group">
-                <label for="name">Naam</label>
-                <input type="text" name="name" id="name" placeholder="Naam" value="{{ old('name') }}" required>
+                <label for="name">{{ __('login.name') }}</label>
+                <input type="text" name="name" id="name" placeholder={{ __('login.name') }} value="{{ old('name') }}" required>
             </div>
 
             <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="email" name="email" id="email" placeholder="E-mail" value="{{ old('email') }}" required>
+                <label for="email">{{ __('login.email') }}</label>
+                <input type="email" name="email" id="email" placeholder={{ __('login.email') }} value="{{ old('email') }}" required>
             </div>
 
             <div class="form-group">
-                <label for="password">Wachtwoord:</label>
-                <input type="password" name="password" id="password" placeholder="Wachtwoord" required>
+                <label for="password">{{ __('login.password') }}</label>
+                <input type="password" name="password" id="password" placeholder={{ __('login.password') }} required>
             </div>
 
             <div class="contactButton">
-                <button type="submit">Login</button>
+                <button type="submit">{{ __('login.login') }}</button>
             </div>
         </form>
 
         <div style="margin-top: 1em;">
-            <a class="navbar-brand" href="/register">registreer</a>
+            <a class="navbar-brand" href="/register">{{ __('login.register_here') }}</a>
         </div>
     </div>
 

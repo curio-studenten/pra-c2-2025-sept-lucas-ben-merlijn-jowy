@@ -249,6 +249,11 @@ button,
 input {
     overflow: visible;
 }
+input {
+    line-height: normal;
+    width: 700px;
+    height: 40px;
+}
 
 button,
 select {

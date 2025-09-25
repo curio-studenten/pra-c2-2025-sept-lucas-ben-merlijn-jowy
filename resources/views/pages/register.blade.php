@@ -1,6 +1,6 @@
 <x-layouts.app>
     <div class="container">
-        <h1>Registreren</h1>
+        <h1>{{ __('login.register') }}</h1>
         <form action="/register" method="POST">
             @csrf
             @if($errors->any())
@@ -13,23 +13,23 @@
             </div>
             @endif
             <div class="form-group">
-                <label for="name">Naam:</label>
-                <input type="text" name="name" id="name" placeholder="Naam" value="{{ old('name') }}" required>
+                <label for="name">{{ __('login.name') }}</label>
+                <input type="text" name="name" id="name" placeholder={{ __('login.name') }} value="{{ old('name') }}" required>
             </div>
             <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="email" name="email" id="email" placeholder="E-mail" value="{{ old('email') }}" required>
+                <label for="email">{{ __('login.email') }}</label>
+                <input type="email" name="email" id="email" placeholder={{ __('login.email') }} value="{{ old('email') }}" required>
             </div>
             <div class="form-group">
-                <label for="password">Wachtwoord:</label>
-                <input type="password" name="password" id="password" placeholder="Wachtwoord" required>
+                <label for="password">{{ __('login.password') }}</label>
+                <input type="password" name="password" id="password" placeholder={{ __('login.password') }} required>
             </div>
             <div class="form-group">
-                <label for="password_confirmation">Herhaal wachtwoord:</label>
-                <input type="password" name="password_confirmation" id="password_confirmation" placeholder="Herhaal wachtwoord" required>
+                <label for="password_confirmation">{{ __('login.password_confirm') }}</label>
+                <input type="password" name="password_confirmation" id="password_confirmation" placeholder={{ __('login.password_confirm') }} required>
             </div>
             <div class="contactButton">
-                <button type="submit">Registreren</button>
+                <button type="submit">{{ __('login.register') }}</button>
             </div>
         </form>
     </div>

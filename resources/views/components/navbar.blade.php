@@ -30,8 +30,8 @@
         </div><!--/.navbar-collapse -->
     </div>
     @if (Auth::check())
-    <a class="navbar-brand" href="{{ route('logout') }}">Uitloggen</a>
+    <a class="navbar-brand" href="{{ route('logout') }}">{{ __('login.logout') }}</a>
     @else
-    <a class="navbar-brand" href="{{ route('login') }}">Inloggen</a>
+    <a class="navbar-brand" href="{{ route('login') }}">{{ __('login.login') }}</a>
     @endif
 </nav>
