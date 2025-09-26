@@ -14,35 +14,37 @@
     </h1>
 
 
-    @if(!isset(Auth::user()->id))
-        <script>window.location = "{{ route('login') }}";</script>
+    @if(!Auth::check())
+        <h1>U heeft een account nodig om contact op te nemen. <a href="{{ route('login') }}">Log eerst in</a>.</h1>
+    @else
+
+
+        <div class="container">
+            <h1>{{ __('contact.contact_title') }}</h1>
+            <p>{{ __('contact.contact_info') }}</p>
+
+            <form action="/contact" method="POST">
+                @csrf
+                <div>
+                    <label for="name">{{ __('contact.your_name') }}</label>
+                    <input type="text" name="name" id="name" required>
+                </div>
+
+                <div>
+                    <label for="email">{{ __('contact.your_email') }}</label>
+                    <input type="email" name="email" id="email" required>
+                </div>
+
+                <div>
+                    <label for="message">{{ __('contact.message') }}</label>
+                    <textarea name="message" id="message" rows="4" required></textarea>
+                </div>
+                <div class="contactButton">
+                    <button type="submit">{{ __('contact.send_message') }}</button>
+                </div>
+            </form>
+
+        </div>
+
     @endif
-
-
-    <div class="container">
-        <h1>{{ __('contact.contact_title') }}</h1>
-        <p>{{ __('contact.contact_info') }}</p>
-
-        <form action="/contact" method="POST">
-            @csrf
-            <div>
-                <label for="name">{{ __('contact.your_name') }}</label>
-                <input type="text" name="name" id="name" required>
-            </div>
-
-            <div>
-                <label for="email">{{ __('contact.your_email') }}</label>
-                <input type="email" name="email" id="email" required>
-            </div>
-
-            <div>
-                <label for="message">{{ __('contact.message') }}</label>
-                <textarea name="message" id="message" rows="4" required></textarea>
-            </div>
-            <div class="contactButton">
-                <button type="submit">{{ __('contact.send_message') }}</button>
-            </div>
-        </form>
-
-    </div>
 </x-layouts.app>
