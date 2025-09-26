@@ -10162,3 +10162,7 @@ button[type="submit"]:active {
     display: flex;
     flex-direction: row;
 }
+
+.submit-button {
+    margin-top: 20px;
+}

@@ -85,6 +85,7 @@ Route::get('/login', function (Request $request) {
 
 
 use App\Http\Controllers\RegisterController;
+
 Route::get('/register', [RegisterController::class, 'create'])->name('register');
 Route::post('/register', [RegisterController::class, 'store']);
 
@@ -98,6 +99,6 @@ Route::get('/logout', function (Request $request) {
 })->name('logout');
 
 //beheerpagina
-Route::get('/beheerPagina', function () {
-    return view('pages.beheerPagina');
-});
+Route::get('/beheerPagina', [App\Http\Controllers\BrandsController::class, 'index'])->name('beheerPagina');
+
+Route::post('/beheer/store', [App\Http\Controllers\BrandsController::class, 'store'])->name('beheer.store');

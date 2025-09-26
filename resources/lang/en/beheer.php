@@ -14,5 +14,6 @@ return [
     */
     'beheernav' => 'Manage Brands',
     'beheertitle' => 'Manage Brands Page',
+    'begroeting' => 'Welcome to the brand management page, ',
 
 ];

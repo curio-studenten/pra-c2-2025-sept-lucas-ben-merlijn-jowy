@@ -14,5 +14,5 @@ return [
     */
     'beheernav' => 'Beheer merken',
     'beheertitle' => 'Beheer Merken Pagina',
-
+    'begroeting' => 'Welkom bij de beheerings pagina, ',
 ];
