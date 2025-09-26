@@ -54,6 +54,7 @@ class BrandsController extends Controller
         $manual->filesize = 0; // default value
         $manual->downloadedServer = 'TransIP'; // atlijd TransIP
         $manual->created_at = now();
+        $manual->views = 0; //default value
         $manual->save();
 
         // Optionally, redirect or return a view with the generated URL
