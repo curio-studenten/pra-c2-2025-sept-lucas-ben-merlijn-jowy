@@ -22,6 +22,8 @@ return [
 'password_confirm' => "Bevestig Wachtwoord:",
 'register' => 'Registreren',
 'logout' => "Uitloggen",
+'remember_login' => "U heeft een account nodig om toegang te krijgen tot deze pagina.",
+'first_login' => "Log eerst in",
 ];
 
 ?>

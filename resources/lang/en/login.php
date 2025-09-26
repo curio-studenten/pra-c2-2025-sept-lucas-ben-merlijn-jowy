@@ -22,5 +22,7 @@ return [
 'password_confirm' => "Confirm Password:",
 'register' => 'Register',
 'logout' => "Logout",
+'remember_login' => "You need an account to get access to this page.",
+'first_login' => "Please login first",
 ];
 ?>

@@ -15,7 +15,7 @@
 
 
     @if(!Auth::check())
-        <h1>U heeft een account nodig om contact op te nemen. <a href="{{ route('login') }}">Log eerst in</a>.</h1>
+        <h1>{{ __('login.remember_login') }} <a href="{{ route('login') }}">{{ __('login.first_login')}}</a>.</h1>
     @else
 
 
