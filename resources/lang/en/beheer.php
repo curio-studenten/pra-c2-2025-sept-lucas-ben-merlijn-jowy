@@ -15,5 +15,9 @@ return [
     'beheernav' => 'Manage Brands',
     'beheertitle' => 'Manage Brands Page',
     'begroeting' => 'Welcome to the brand management page, ',
+    'info' => 'Add manual to brand name:',
+    'manual_name' => 'Name of the manual:',
+    'file_name' => 'Name of the file:',
+    'url' => 'Generated URL:',
 
 ];

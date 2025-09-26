@@ -27,7 +27,7 @@
 
             <form action="{{ route('beheer.store') }}" method="POST">
                 @csrf
-                <label for="name">Manual toevoegen aan brand naam:</label>
+                <label for="name">{{ __('beheer.info') }}</label>
                 <select name="brand_name">
                     @foreach($BrandsList as $brand)
                     <option value="{{$brand->name}}">{{ $brand->name }}</option>
@@ -36,15 +36,15 @@
 
 
 
-                <label for="Manual_name">Naam vaan de manual:</label>
+                <label for="Manual_name">{{ __('beheer.manual_name') }}</label>
                 <input type="text" name="manual_name" id="manual_name" required>
 
-                <label for="File_name">Naam van de file:</label>
+                <label for="File_name">{{ __('beheer.file_name') }}</label>
                 <input type="text" name="file_name" id="file_name" required>
 
 
                 @if(isset($manualUrl))
-                <p>Gegenereerde URL: <a href="{{ $manualUrl }}" target="_blank">{{ $manualUrl }}</a></p>
+                <p>{{ __('beheer.url') }} <a href="{{ $manualUrl }}" target="_blank">{{ $manualUrl }}</a></p>
                 @endif
 
                 <div class="submit-button">
