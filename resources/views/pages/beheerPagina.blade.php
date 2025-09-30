@@ -15,14 +15,14 @@
     </h1>
 
     @if(!Auth::check())
-    <h1>{{ __('login.remember_login') }} <a href="{{ route('login') }}">{{ __('login.first_login')}}</a>.</h1>
+        <h1>{{ __('login.remember_login') }} <a href="{{ route('login') }}">{{ __('login.first_login')}}</a>.</h1>
     @else
 
         <div class="container">
             <h1>{{ __('beheer.beheertitle') }}</h1>
 
             @if (Auth::check())
-            <h3>{{ __('beheer.begroeting') }} {{ Auth::user()->name }} </h3>
+                <h3>{{ __('beheer.begroeting') }} {{ Auth::user()->name }} </h3>
             @endif
 
             <form action="{{ route('beheer.store') }}" method="POST">
@@ -30,7 +30,7 @@
                 <label for="name">{{ __('beheer.info') }}</label>
                 <select name="brand_name">
                     @foreach($BrandsList as $brand)
-                    <option value="{{$brand->name}}">{{ $brand->name }}</option>
+                        <option value="{{$brand->name}}">{{ $brand->name }}</option>
                     @endforeach
                 </select>
 
@@ -44,7 +44,7 @@
 
 
                 @if(isset($manualUrl))
-                <p>{{ __('beheer.url') }} <a href="{{ $manualUrl }}" target="_blank">{{ $manualUrl }}</a></p>
+                    <p>{{ __('beheer.url') }} <a href="{{ $manualUrl }}" target="_blank">{{ $manualUrl }}</a></p>
                 @endif
 
                 <div class="submit-button">
@@ -53,6 +53,34 @@
             </form>
         </div>
     @endif
+
+
+
+    <h2>Manuals List</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>{{ __('beheer.manual_name') }}</th>
+                <th>{{ __('beheer.actions') }}</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach ($manuals as $manual)
+                <tr>
+                    <td>{{ $manual->name }}</td>
+                    <td>
+                        <form action="{{ route('manuals.destroy', $manual->id) }}" method="POST" style="display:inline;">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" style="background:none; border:none; color:red; cursor:pointer;">
+                                <i class="fa-solid fa-trash"></i>
+                            </button>
+                        </form>
+                    </td>
+                </tr>
+            @endforeach
+        </tbody>
+    </table>
     <!--todo:
 database manuals
 id: auto incremented

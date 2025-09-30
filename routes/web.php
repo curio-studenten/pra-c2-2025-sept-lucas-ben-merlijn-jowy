@@ -4,6 +4,8 @@
 use App\Http\Controllers\ContactController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
+use App\Http\Controllers\ManualsController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -102,3 +104,7 @@ Route::get('/logout', function (Request $request) {
 Route::get('/beheerPagina', [App\Http\Controllers\BrandsController::class, 'index'])->name('beheerPagina');
 
 Route::post('/beheer/store', [App\Http\Controllers\BrandsController::class, 'store'])->name('beheer.store');
+
+Route::get('/beheer', [App\Http\Controllers\ManualController::class, 'beheerPagina'])->name('beheer.pagina');
+
+Route::delete('/manuals/{manual}', [App\Http\Controllers\ManualController::class, 'destroy'])->name('manuals.destroy');

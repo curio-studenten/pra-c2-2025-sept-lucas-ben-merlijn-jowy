@@ -14,9 +14,10 @@ class BrandsController extends Controller
     public function index()
     {
         $BrandsList = \App\Models\Brands::all();
+        $manuals = \App\Models\Manuals::all(); 
 
 
-        return view('pages.beheerPagina', compact('BrandsList'));
+        return view('pages.beheerPagina', compact('BrandsList', 'manuals'));
     }
 
     /**
