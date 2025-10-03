@@ -15,57 +15,56 @@
     </h1>
 
     @if(!Auth::check())
-        <h1>{{ __('login.remember_login') }} <a href="{{ route('login') }}">{{ __('login.first_login')}}</a>.</h1>
+    <h1>{{ __('login.remember_login') }} <a href="{{ route('login') }}">{{ __('login.first_login')}}</a>.</h1>
     @else
 
-        <div class="container">
-            <h1>{{ __('beheer.beheertitle') }}</h1>
+    <div class="container">
+        <h1>{{ __('beheer.beheertitle') }}</h1>
 
-            @if (Auth::check())
-                <h3>{{ __('beheer.begroeting') }} {{ Auth::user()->name }} </h3>
+        @if (Auth::check())
+        <h3>{{ __('beheer.begroeting') }} {{ Auth::user()->name }} </h3>
+        @endif
+
+        <form action="{{ route('beheer.store') }}" method="POST">
+            @csrf
+            <label for="name">{{ __('beheer.info') }}</label>
+            <select name="brand_name">
+                @foreach($BrandsList as $brand)
+                <option value="{{$brand->name}}">{{ $brand->name }}</option>
+                @endforeach
+            </select>
+
+
+
+            <label for="Manual_name">{{ __('beheer.manual_name') }}</label>
+            <input type="text" name="manual_name" id="manual_name" required>
+
+            <label for="File_name">{{ __('beheer.file_name') }}</label>
+            <input type="text" name="file_name" id="file_name" required>
+
+
+            @if(isset($manualUrl))
+            <p>{{ __('beheer.url') }} <a href="{{ $manualUrl }}" target="_blank">{{ $manualUrl }}</a></p>
             @endif
 
-            <form action="{{ route('beheer.store') }}" method="POST">
-                @csrf
-                <label for="name">{{ __('beheer.info') }}</label>
-                <select name="brand_name">
-                    @foreach($BrandsList as $brand)
-                        <option value="{{$brand->name}}">{{ $brand->name }}</option>
-                    @endforeach
-                </select>
+            <div class="submit-button">
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+    </div>
 
 
 
-                <label for="Manual_name">{{ __('beheer.manual_name') }}</label>
-                <input type="text" name="manual_name" id="manual_name" required>
-
-                <label for="File_name">{{ __('beheer.file_name') }}</label>
-                <input type="text" name="file_name" id="file_name" required>
-
-
-                @if(isset($manualUrl))
-                    <p>{{ __('beheer.url') }} <a href="{{ $manualUrl }}" target="_blank">{{ $manualUrl }}</a></p>
-                @endif
-
-                <div class="submit-button">
-                    <input type="submit" value="Submit">
-                </div>
-            </form>
-        </div>
-    @endif
-
-
-
-    <h2>Manuals List</h2>
-    <table>
-        <thead>
-            <tr>
-                <th>{{ __('beheer.manual_name') }}</th>
-                <th>{{ __('beheer.actions') }}</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach ($manuals as $manual)
+        <h2>Manuals List</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>{{ __('beheer.manual_name') }}</th>
+                    <th>{{ __('beheer.actions') }}</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach ($manuals as $manual)
                 <tr>
                     <td>{{ $manual->name }}</td>
                     <td>
@@ -78,9 +77,10 @@
                         </form>
                     </td>
                 </tr>
-            @endforeach
-        </tbody>
-    </table>
+                @endforeach
+            </tbody>
+        </table>
+    @endif
     <!--todo:
 database manuals
 id: auto incremented
