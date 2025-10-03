@@ -19,4 +19,5 @@ return [
     'manual_name' => 'Naam van de manual:',
     'file_name' => 'Naam van de file:',
     'url' => 'Gegenereerde URL:',
+    'actions' => 'Verwijder',
 ];

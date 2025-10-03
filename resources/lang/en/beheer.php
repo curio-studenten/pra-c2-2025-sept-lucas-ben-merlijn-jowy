@@ -19,5 +19,6 @@ return [
     'manual_name' => 'Name of the manual:',
     'file_name' => 'Name of the file:',
     'url' => 'Generated URL:',
+    'actions' => 'Delete',
 
 ];
