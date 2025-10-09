@@ -11,13 +11,13 @@ return new class extends Migration
         Schema::create('manuals', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('brand_id');
-            $table->integer('views');
             $table->string('name');
             $table->bigInteger('filesize');
             $table->text('originUrl');
+            $table->text('shortlink');
             $table->string('filename')->nullable();
             $table->string('downloadedServer')->nullable();
-            $table->unsignedBigInteger('view_count')->default(0); // ✅ nieuw veld
+            $table->unsignedBigInteger('views')->default(0);
             $table->timestamps();
 
             $table->foreign('brand_id')->references('id')->on('brands');
