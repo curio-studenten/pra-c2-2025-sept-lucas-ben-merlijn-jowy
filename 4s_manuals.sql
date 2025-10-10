@@ -139,7 +139,7 @@ INSERT INTO `manuals` (`id`, `brand_id`, `name`, `filesize`, `originUrl`, `filen
 (57, 27, '1289-4201', 2695127, 'http://manualsonline.com/manuals/mfg/Sony/12894201.html', '2f5b5959-5011-4ade-843d-398bfb675521.pdf', 'TransIP', NULL, NULL, 'w9mx'),
 (58, 27, '1289-4874', 1585736, 'http://manualsonline.com/manuals/mfg/Sony/12894874.html', 'a73d7e56-4f10-4fbd-af3a-e3f75b0270f7.pdf', 'TransIP', NULL, NULL, 'q5dn'),
 (59, 28, 'P9050', 2464062, 'http://manualsonline.com/manuals/mfg/Pantech/P9050.html', '38e58961-715b-4d19-9846-8f54707f09f6.pdf', 'TransIP', NULL, NULL, 'h1kj'),
-(60, 29, 'CMP-20', 871653, 'http://manualsonline.com/manuals/mfg/Citizen/CMP20.html', '600e787c-0ff3-4016-af90-39108ba462f3.pdf', 'TransIP', NULL, NULL, 'm8rv');
+(60, 29, 'CMP-20', 871653, 'http://manualsonline.com/manuals/mfg/Citizen/CMP20.html', '600e787c-0ff3-4016-af90-39108ba462f3.pdf', 'TransIP', NULL, NULL, 'm8rv'),
 (61, 30, 'M5316', 9231080, 'http://manualsonline.com/manuals/mfg/Aastra_Telecom/M5316.html', '6c45af61-f0fc-4454-bb31-582cc0e3fb90.pdf', 'TransIP', NULL, NULL, 'v4jq'),
 (62, 31, '25202RE3', 449677, 'http://manualsonline.com/manuals/mfg/RCA/25202RE3.html', '31f206bd-a033-4979-94e4-60dea9376deb.pdf', 'TransIP', NULL, NULL, 'r7kd'),
 (63, 32, 'TL86009', 13782197, 'http://manualsonline.com/manuals/mfg/vtech_communications/TL86009.html', '39bf9f14-7ef6-4437-b55b-e96e09070f82.pdf', 'TransIP', NULL, NULL, 'k3pw'),
